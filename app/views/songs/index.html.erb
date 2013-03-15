@@ -1,0 +1,36 @@
+<%= link_to "Home", controller: :home %>
+<h1>Song Listings</h1>
+<p>Click song title and a youtube video for the 
+  song will open in a new tab.</p>
+<p>Please consult with Dan (dweddle@siteavail.com) before
+  adding or deleting songs.</p>
+<p>If you know some chords 
+  feel free to click 'Edit' and put them in the Comment
+  field.</p>
+<p>Happy practicing!</p><br/>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Options</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs.each do |song| %>
+  <tr>
+    <td><i><b><a href="<%= song.url %>" target='_blank'>
+      <%= song.title %></a></i></b></td>
+    <td><%= link_to 'Show', song %></td>
+    <td><%= link_to 'Edit', edit_song_path(song) %></td>
+    <td><%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <tr>
+    <td><%= song.comment %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Song', new_song_path %>
