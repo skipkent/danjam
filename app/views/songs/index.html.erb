@@ -26,7 +26,7 @@
     <td><%= link_to 'Edit', edit_song_path(song) %>&nbsp;&nbsp;&nbsp;&nbsp;</td>
   </tr>
   <tr>
-    <td><%= song.comment %></td>
+    <td><%= song.comment.truncate(20) %></td>
   </tr>
 <% end %>
 </table>
