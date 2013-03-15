@@ -21,6 +21,7 @@
   <tr>
     <td><i><b><a href="<%= song.url %>" target='_blank'>
       <%= song.title %></a></i></b></td>
+    <td>-----</td>
     <td><%= link_to 'Show', song %></td>
     <td><%= link_to 'Edit', edit_song_path(song) %></td>
     <td><%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
