@@ -1,3 +1,27 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* style.css - a simple style sheet */
+body {
+  margin-left: 10%; margin-right: 10%;
+  color: black; background: Cornsilk;
+}
+
+p { text-align: center;}
+
+h1 { text-align: center;}
+  h2,h3,h4,h5,h6 { text-align: center; }
+
+h2 { margin-top: 8em; margin-bottom: 3em; }
+
+div.topbox { border: solid; color: black; border-width: thin; width: 100%;
+    background: LightSkyBlue;
+    padding: 0.5em;
+   }
+
+div.inputform { margin-top: 1em; margin-bottom: 1em; }
+div.menu { margin-top: 2em; margin-bottom: 2em; }
+div.toptext { margin-top: 3em; margin-bottom: 0em; }
+
+

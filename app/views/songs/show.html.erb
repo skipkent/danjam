@@ -1,5 +1,7 @@
-<h1>Song Details</h1>
-<p id="notice"><%= notice %></p>
+<div class="topbox">
+  <h1>Song Details</h1>
+  <p id="notice"><%= notice %></p>
+</div>
 
 <p>
   <b>Title:</b>
@@ -13,7 +15,7 @@
 
 <p>
   <b>Chords & Comments:</b>
-  <%= auto_link(simple_format(@song.comment)) %>
+  <%= sanitize(auto_link(simple_format(@song.comment))) %>
 </p>
 
 
