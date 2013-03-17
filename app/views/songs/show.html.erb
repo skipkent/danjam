@@ -20,9 +20,9 @@
   <%= auto_link(simple_format(@song.comment)) %>
 </p>
 
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Add', new_song_path %> |
-<%= link_to 'Song Listings', songs_path %>
-<br/><br/>
+<div class="menu">
+  <%= link_to 'Edit', edit_song_path(@song) %> |
+  <%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Add', new_song_path %> |
+  <%= link_to 'Song Listings', songs_path %>
+<div>
