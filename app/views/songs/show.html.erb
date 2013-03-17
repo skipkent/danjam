@@ -3,6 +3,7 @@
   <p id="notice"><%= notice %></p>
 </div>
 
+<div class="center">
 <p>
   <b>Title:</b>
   <i><b><%= @song.title %></b></i>
@@ -12,10 +13,11 @@
   <b>Url:</b>
   <%= @song.url %>
 </p>
+</div>
 
 <p>
   <b>Chords & Comments:</b>
-  <%= sanitize(auto_link(simple_format(@song.comment))) %>
+  <%= auto_link(simple_format(@song.comment)) %>
 </p>
 
 

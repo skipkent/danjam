@@ -8,7 +8,7 @@ body {
   color: black; background: Cornsilk;
 }
 
-p { text-align: center;}
+div.center { text-align: center;}
 
 h1 { text-align: center;}
   h2,h3,h4,h5,h6 { text-align: center; }
@@ -23,5 +23,6 @@ div.topbox { border: solid; color: black; border-width: thin; width: 100%;
 div.inputform { margin-top: 1em; margin-bottom: 1em; }
 div.menu { margin-top: 2em; margin-bottom: 2em; }
 div.toptext { margin-top: 3em; margin-bottom: 0em; }
+div.chords { text-align: left; }
 
 
