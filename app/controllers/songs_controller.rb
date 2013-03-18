@@ -1,6 +1,8 @@
 class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
+  layout 'backstage'
+  
   def index
     @songs = Song.all
 
@@ -32,12 +34,7 @@ class SongsController < ApplicationController
     end
   end
 
-  # GET /songs/1/edit
-  def edit
-    @song = Song.find(params[:id])
-  end
-
-  # POST /songs
+   # POST /songs
   # POST /songs.json
   def create
     @song = Song.new(params[:song])
@@ -53,6 +50,11 @@ class SongsController < ApplicationController
     end
   end
 
+  # GET /songs/1/edit
+  def edit
+    @song = Song.find(params[:id])
+  end
+
   # PUT /songs/1
   # PUT /songs/1.json
   def update
@@ -60,7 +62,7 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.update_attributes(params[:song])
-        format.html { redirect_to @song, notice: 'Song was successfully updated.' }
+        format.html { redirect_to controller: :chords, id: @song.id, notice: 'Song was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

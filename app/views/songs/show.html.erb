@@ -1,18 +1,20 @@
-<div class="topbox">
-  <h1>Song Details</h1>
-  <p id="notice"><%= notice %></p>
-</div>
+<h1>Song Details</h1>
+<p id="notice"><%= notice %></p>
 
 <div class="center">
-<p>
-  <b>Title:</b>
-  <i><b><%= @song.title %></b></i>
-</p>
+  <p>
+    <b>Title:</b>
+    <i><b><%= @song.title %></b></i>
+    <div class="menu">
+      <%= link_to 'Edit', edit_song_path(@song) %> |
+      <%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %> 
+    <div>
+  </p>
 
-<p>
-  <b>Url:</b>
-  <%= @song.url %>
-</p>
+  <p>
+    <b>Url:</b>
+    <%= @song.url %>
+  </p>
 </div>
 
 <p>
@@ -20,9 +22,4 @@
   <%= auto_link(simple_format(@song.comment)) %>
 </p>
 
-<div class="menu">
-  <%= link_to 'Edit', edit_song_path(@song) %> |
-  <%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Add', new_song_path %> |
-  <%= link_to 'Song Listings', songs_path %>
-<div>
+
