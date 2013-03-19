@@ -1,9 +1,14 @@
 Danjam::Application.routes.draw do
+  get "comments/index"
+
+  get "comments/new"
+
   get "chords/index"
   get "chords/edit"
 
   resources :songs
   resources :chords
+  resources :comments
 
   get "home/index"
   root to: "home#index"

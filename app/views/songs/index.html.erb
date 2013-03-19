@@ -30,7 +30,9 @@
     <td><i><b><a href="<%= song.url %>" target='_blank'>
       <%= song.title %></a></i></b></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %></td>
+    <td><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %> | </td> 
+    <% numberOfComments = commentsCount(song.id) %>
+    <td><%= link_to "Comments(#{numberOfComments})", controller: :comments, song_id: song.id %> | </td> 
     <td><%= link_to 'Edit', edit_song_path(song) %></td> 
   </tr>
 <% end %>

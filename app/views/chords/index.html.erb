@@ -4,5 +4,5 @@
     <h3><%= @song.title %></h3>
     <%= link_to "Edit", controller: :songs, action: :edit, id: @song.id %>
   </div>
-  <%= auto_link(simple_format(@song.comment)) %>
+  <%= auto_link(simple_format(@song.chords)) %>
 </p>
