@@ -7,19 +7,23 @@
     <i><b><%= @song.title %></b></i>
     <div class="menu">
       <%= link_to 'Edit', edit_song_path(@song) %> |
-      <%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %> 
+      <%= link_to 'Back', action: :index %>
     <div>
   </p>
 
   <p>
     <b>Url:</b>
-    <%= @song.url %>
+    <%= auto_link(@song.url, html: { target: "_blank" }) %>
   </p>
 </div>
 
 <p>
-  <b>Chords & Comments:</b>
-  <%= auto_link(simple_format(@song.chords)) %>
+  <div class="chords">
+    <b><u>Chords & Lyrics:</b></u><br/>
+    <%= auto_link(simple_format(@song.chords)) %>
+  </div>
 </p>
+
+<%= link_to 'Delete', @song, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 

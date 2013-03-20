@@ -32,7 +32,7 @@
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %> | </td> 
     <td><%= link_to "Comments(#{commentsCount(song.id)})", controller: :comments, song_id: song.id %> | </td> 
-    <td><%= link_to 'Edit', edit_song_path(song) %></td> 
+    <td><%= link_to 'Details', action: :show, id: song.id %></td> 
   </tr>
 <% end %>
 </table>

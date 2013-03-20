@@ -70,7 +70,7 @@ class SongsController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /songs/1
   # DELETE /songs/1.json
   def destroy
