@@ -10,7 +10,7 @@
   <tr>
     <th>Username</th>
     <th>Message</th>
-    <th></th>
+    <th>Time Posted</th>
     <th></th>
     <th></th>
   </tr>
@@ -19,6 +19,7 @@
   <tr>
     <td><%= comment.username %></td>
     <td><%= comment.message %></td>
+    <td><%= comment.updated_at.strftime("%A %m/%d/%y, %I:%M %p") %></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td><%= link_to 'Edit', edit_comment_path(id: comment.id, song_id: comment.song_id) %> |</td>
     <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
