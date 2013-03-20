@@ -6,3 +6,5 @@
   </div>
   <%= auto_link(simple_format(@song.chords)) %>
 </p>
+<%= link_to "Back to Song Listings", songs_path %> |
+<%= link_to "Comments(#{commentsCount(@song.id)})", controller: :comments, song_id: @song.id %>
