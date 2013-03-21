@@ -2,30 +2,35 @@
 <html>
 <head>
   <title>Target Cancer Benefit - BACKSTAGE</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%#= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "sitewide", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="topbox">
+  <div class="headerbox">
     <h3>2013 Target Cancer Benefit Concert - BACKSTAGE</h3>
     <div class="header_menu">
-      <%= link_to "Home", controller: :home, action: :index %> |
-      <%= link_to "Song Listings", controller: :songs, action: :index %> |
-      <%= link_to "Announcements", '#' %> |
-      <%= link_to "My Songs", controller: :songs, action: :index %> 
+      <ul>
+        <li><%= link_to "Home", controller: :home, action: :index %></li> |
+        <li><%= link_to "Song Listings", controller: :songs, action: :index %></li> |
+        <li><%= link_to "Announcements", '#' %></li> |
+        <li><%= link_to "My Songs", controller: :songs, action: :index %></li> 
+      </ul>
     </div>
   </div> 
 
 <%= yield %>
   
-  <div class="bottombox">
-    <%= link_to "Home", controller: :home, action: :index %> | 
-    <%= link_to "About Target Cancer", "http://www.targetcancer.info", 
-        { target: "_blank" } %> | 
-    <%= link_to "Time & Directions", '#' %> | 
-    <%= link_to "Contact", '#' %> | 
-    <%= link_to "Backstage", controller: :songs, action: :index %>
+  <div class="footerbox">
+    <ul>
+      <li><%= link_to "Home", controller: :home, action: :index %></li> | 
+      <li><%= link_to "About Target Cancer", "http://www.targetcancer.info", 
+          { target: "_blank" } %></li> | 
+      <li><%= link_to "Time & Directions", '#' %></li> | 
+      <li><%= link_to "Contact", '#' %></li> | 
+      <li><%= link_to "Backstage", controller: :songs, action: :index %></li>
+    </ul>
   </div>
 
 </body>

@@ -1,10 +1,8 @@
 <h1>Song Listings</h1>
 
-<div class="toptext">
   <div class="center">
-    <div class="menu">
-      <%= link_to 'Add new song', new_song_path %>
-    </div>
+    <p><%= link_to 'Add new song', new_song_path %></p>
+
     <p>-->>><b>Click song title and a youtube video for the 
       song will open in a new tab</b><<<--</p>
     <p>Please consult with gig coordinator <a href="mailto:dweddle@siteavail.com">Dan Weddle</a> before
@@ -14,25 +12,22 @@
       field.</p>
     <p>Happy practicing!</p>
   </div>
-</div>
 
-<table>
+<table class="center">
   <tr>
     <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Chords</th>
+    <th>Comments</th>
+    <th>Details</th>
   </tr>
 
 <% @songs.each do |song| %>
   <tr>
     <td><i><b><a href="<%= song.url %>" target='_blank'>
-      <%= song.title %></a></i></b></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %> | </td> 
-    <td><%= link_to "Comments(#{commentsCount(song.id)})", controller: :comments, song_id: song.id %> | </td> 
-    <td><%= link_to 'Details', action: :show, id: song.id %></td> 
+        <%= song.title %></a></i></b></td>
+    <td class="options"><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %> </td> 
+    <td class="options"><%= link_to "Comments(#{commentsCount(song.id)})", controller: :comments, song_id: song.id %> </td> 
+    <td class="options"><%= link_to 'Details', action: :show, id: song.id %></td> 
   </tr>
 <% end %>
 </table>

@@ -1,0 +1,75 @@
+/* experimental css for entire site by Kent 
+   I updated the layouts to just use this file,
+   so bear that in mind if you want to roll this 
+   back. */
+
+body 
+  {
+    background-color:Beige;
+  }
+
+ul
+  {
+    list-style-type:none;
+    text-align: center;
+    margin:4;
+    padding:4;
+  }
+
+li
+  {
+    width:160px;
+    display:inline;
+    text-align:center;
+  }
+
+.menuitem
+  {
+    display:block;
+    width:60px;
+  }
+
+h1, h2, h3, p.center, div.center
+  {
+    text-align:center;
+  }
+
+table
+  {
+    border-collapse:collapse;
+    width:75%;
+  }
+
+table.center 
+  {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+td
+  {
+    padding:4px;
+    background-color:Wheat;
+  }
+
+  th
+  {
+    padding:4px;
+    background-color:SandyBrown;
+  }
+
+td.options
+  {
+    text-align:center;
+  }
+
+table,th,td
+  {
+    border:1px solid black;
+  }
+
+th.songlist
+  {
+    border:0px;
+  }
+
