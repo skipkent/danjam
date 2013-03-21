@@ -3,7 +3,7 @@
 <head>
   <title>Target Cancer Benefit - BACKSTAGE</title>
   <%= stylesheet_link_tag  "sitewide", :media => "all" %>
-  <%#= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,8 +13,8 @@
       <ul>
         <li><%= link_to "Home", controller: :home, action: :index %></li> |
         <li><%= link_to "Song Listings", controller: :songs, action: :index %></li> |
-        <li><%= link_to "Announcements", '#' %></li> |
-        <li><%= link_to "My Songs", controller: :songs, action: :index %></li> 
+        <li><%= link_to "Forum", controller: :posts %></li> |
+        <li><%= link_to "Performer Bios", action: :bios %></li> 
       </ul>
     </div>
   </div> 
@@ -26,8 +26,8 @@
       <li><%= link_to "Home", controller: :home, action: :index %></li> | 
       <li><%= link_to "About Target Cancer", "http://www.targetcancer.info", 
           { target: "_blank" } %></li> | 
-      <li><%= link_to "Time & Directions", '#' %></li> | 
-      <li><%= link_to "Contact", '#' %></li> | 
+      <li><%= link_to "Time & Directions", controller: :home, action: :directions %></li> | 
+      <li><%= link_to "Contact", controller: :home, action: :contact %></li> | 
       <li><%= link_to "Backstage", controller: :songs, action: :index %></li>
     </ul>
   </div>

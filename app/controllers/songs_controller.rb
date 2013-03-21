@@ -12,6 +12,10 @@ class SongsController < ApplicationController
     end
   end
 
+  def bios
+    render 'bios'
+  end
+
   # GET /songs/1
   # GET /songs/1.json
   def show

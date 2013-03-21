@@ -1,26 +1,37 @@
 <h1>Comments</h1>
 
-<div class="center">
-  <p>
-    <i><b><%= @song.title %></b></i>
-  </p>
-</div>
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Message</th>
-    <th>Time Posted</th>
-    <th></th>
-    <th></th>
+  <% if @header_type == 'song' %>
+    <p class="center"><i><b><%= @song.title %></b></i></p>
+  <% elsif @header_type == 'post' %>
+    <p class="right"><i><b><%= @post.title %></b></i></p>
+    <p class="post_message"><%= @post.message %></p>
+  <% end %>
+
+<% if @comments.size > 0 %>
+  <table class="center">
+    <tr>
+      <th>Username</th>
+      <th>Message</th>
+      <th>Time Posted</th>
+      <th></th>
+      <th></th>
   </tr>
+<% end %>
 
 <% @comments.each do |comment| %>
   <tr>
     <td><b><%= comment.username %></b></td>
     <td><%= simple_format(word_wrap comment.message, line_width: 60) %></td>
     <td><%= comment.updated_at.strftime("%a %m/%d/%y, %I:%M %p") %></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><%= link_to 'Edit', edit_comment_path(id: comment.id, song_id: comment.song_id) %> |</td>
+    <td><% if @header_type == 'song' %>
+      <%= link_to 'Edit', edit_comment_path(id: comment.id, 
+                                            comment_type: 'song', 
+                                            song_id: comment.song_id) %>
+    <% elsif @header_type == 'post' %>
+      <%= link_to 'Edit', edit_comment_path(id: comment.id, 
+                                            comment_type: 'post', 
+                                            post_id: comment.post_id) %>
+    <% end %></td>
     <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -28,5 +39,9 @@
 
 <br />
 
-<%= link_to 'New Comment', new_comment_path(:song_id => @song.id) %> |
+<% if @header_type == 'song' %>
+  <%= link_to 'New Comment', new_comment_path(song_id: @song.id, comment_type: 'song') %> |
+<% elsif @header_type == 'post' %>
+  <%= link_to 'New Comment', new_comment_path(post_id: @post.id, comment_type: 'post') %> |
+<% end %>
 <%= link_to 'Back', :back %>

@@ -1,17 +1,16 @@
 <h1>Song Details</h1>
 <p id="notice"><%= notice %></p>
 
-<div class="center">
-  <p>
+  <p class="center">
     <b>Title:</b>
     <i><b><%= @song.title %></b></i>
-    <div class="menu">
+    <p class="center">
       <%= link_to 'Edit', edit_song_path(@song) %> |
       <%= link_to 'Back', action: :index %>
-    <div>
+    <p>
   </p>
 
-  <p>
+  <p class="center">
     <b>Url:</b>
     <%= auto_link(@song.url, html: { target: "_blank" }) %>
   </p>

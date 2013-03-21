@@ -12,8 +12,8 @@ ul
   {
     list-style-type:none;
     text-align: center;
-    margin:4;
-    padding:4;
+    margin:2;
+    padding:2;
   }
 
 li
@@ -29,10 +29,16 @@ li
     width:60px;
   }
 
-h1, h2, h3, p.center, div.center
+h1, h2, h3, div.center
   {
     text-align:center;
   }
+
+p.center
+  {
+     text-align:center;
+  }
+
 
 table
   {
@@ -52,9 +58,9 @@ td
     background-color:Wheat;
   }
 
-  th
+th
   {
-    padding:4px;
+    padding:2px;
     background-color:SandyBrown;
   }
 
