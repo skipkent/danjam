@@ -44,6 +44,21 @@ table
   {
     border-collapse:collapse;
     width:75%;
+    margin-bottom:25px;
+  }
+
+.rounded-corners {
+     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}  
+
+table.summary
+  {
+    border-collapse:collapse;
+    width:50%;
+    margin-bottom:25px;
   }
 
 table.center 
@@ -58,11 +73,34 @@ td
     background-color:Wheat;
   }
 
+
+td.summary
+  {
+    padding:0px;
+    background-color:Wheat;
+    text-align:center;
+    font-size:100%;
+  }
+
+td.post_title
+{
+  padding:4px;
+  background-color:Wheat;
+  width:15%;
+}
+
 th
   {
     padding:2px;
     background-color:SandyBrown;
   }
+
+th.summary
+{
+  padding:0px;
+  background-color:SandyBrown;
+  font-size:150%;
+}
 
 td.options
   {

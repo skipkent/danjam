@@ -1,0 +1,55 @@
+  424  git push heroku master
+  427  git push heroku master
+  430  git push heroku master
+  433  git push heroku master
+  457  git push heroku master
+  458  heroku run rake db:migrate
+  506  git push heroku master
+  507  git push heroku master
+  512  git push heroku master
+  513  heroku logs
+  519  git push heroku master
+  523  git push heroku master
+  524  heroku logs
+  527  git push heroku master
+  528  heroku logs
+  530  git push heroku master
+  533  git push heroku master
+  536  git push heroku master
+  539  git push heroku master
+  543  git push heroku master
+  544  heroku logs
+  547  git push heroku master
+  550  git push heroku master
+  553  git push heroku master
+  554  heroku logs
+  555  heroku run bash
+  558  git push heroku master
+  559  heroku logs
+  562  git push heroku master
+  575  git push heroku master
+  581  heroku db:pull sqlite://db/development.sqlite3
+  583  heroku db:pull sqlite://db/development.sqlite3
+  586  heroku db:pull sqlite://db/development.sqlite3
+  589  heroku db:pull sqlite://db/development.sqlite3
+  590  heroku db:pull sqlite3://db/development.sqlite3
+  591   heroku plugins:install https://github.com/ddollar/heroku-pg-transfer
+  592  sudo gem install heroku
+  593  heroku db:pull sqlite://db/development.sqlite3
+  594  heroku db:pull sqlite://db/development
+  596  which heroku
+  598  rm -rf ~/.heroku/client/
+  599  heroku
+  600  heroku db:pull sqlite://db/development
+  601  heroku logs
+  602  sudo gem install heroku
+  603  heroku db:pull sqlite://db/development
+  606  heroku db:pull sqlite://db/development
+  607  bundle exec heroku db:pull sqlite://db/development
+  671  git push heroku master
+  672  heroku logs
+  673  heroku run rake db:migrate
+  674  heroku logs
+  675  heroku run rake db:migrate
+  677  history |grep heroku
+  678  history |grep heroku > heroku_command_history.txt

@@ -7,11 +7,11 @@ class CommentsController < ApplicationController
   def index
     if params[:c_type] == 'song'
       @header_type = 'song'
-      @comments = Comment.where(song_id: params[:song_id])
+      @comments = Comment.where(song_id: params[:song_id]).order("updated_at DESC")
       @song = Song.find(params[:song_id])
     elsif params[:c_type] == 'post'
       @header_type = 'post'
-      @comments = Comment.where(post_id: params[:post_id])
+      @comments = Comment.where(post_id: params[:post_id]).order("updated_at DESC")
       @post = Post.find(params[:post_id])
     end
     #@post = Post.find(params[:post_id])

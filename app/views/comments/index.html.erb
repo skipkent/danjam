@@ -1,10 +1,20 @@
 <h1>Comments</h1>
 
   <% if @header_type == 'song' %>
-    <p class="center"><i><b><%= @song.title %></b></i></p>
+  <table class="center summary">
+    <tr>
+      <th class="summary"><p class="center"><%= @song.title %></p></th>
+    </tr>
+  </table>
   <% elsif @header_type == 'post' %>
-    <p class="right"><i><b><%= @post.title %></b></i></p>
-    <p class="post_message"><%= @post.message %></p>
+  <table class="center summary">
+    <tr>
+      <th class="summary"><p class="right"><%= @post.title %></p></th>
+    </tr>
+    <tr>
+      <td class="summary"><p class="post_message"><%= @post.message %></p></td>
+    </tr>
+  </table>
   <% end %>
 
 <% if @comments.size > 0 %>
