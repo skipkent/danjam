@@ -1,4 +1,7 @@
 Danjam::Application.routes.draw do
+  resources :users
+
+
   resources :posts
 
 
@@ -10,6 +13,8 @@ Danjam::Application.routes.draw do
   
   get "chords/index"
   get "chords/edit"
+  
+  match "users/bios" => "users#bios"
 
   resources :songs
   resources :chords

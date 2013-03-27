@@ -1,0 +1,53 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label "Preferred Contact Channel" %><br />
+    <%= f.select "preferred_contact_channel", "<option>Email</option><option>Phone</option>".html_safe %>
+  </div>
+  <div class="field">
+    <%= f.label :private_bio %><br />
+    <%= f.text_area :private_bio %>
+  </div>
+  <div class="field">
+    <%= f.label :public_bio %><br />
+    <%= f.text_area :public_bio %>
+  </div>
+  <div class="field">
+    <%= f.label :display_public %><br />
+    <%= f.check_box :display_public %>
+  </div>
+    <div class="field">
+    <%= f.label :instruments %><br />
+    <%= f.text_field :instruments %>
+  </div>
+    <div class="field">
+    <%= f.label :vocals %><br />
+    <%= f.check_box :vocals %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

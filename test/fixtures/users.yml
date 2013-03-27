@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  preferred_contact_channel: MyString
+  private_bio: MyText
+  public_bio: MyText
+  display_public: false
+
+two:
+  name: MyString
+  email: MyString
+  preferred_contact_channel: MyString
+  private_bio: MyText
+  public_bio: MyText
+  display_public: false
