@@ -24,7 +24,8 @@
 <% @songs.each do |song| %>
   <tr>
     <td><i><b><a href="<%= song.url %>" target='_blank'>
-        <%= song.title %></a></i></b></td>
+        <%= song.title %></a></i></b><br />
+        <%= song.performers %></td>
     <td class="options"><%= link_to 'Chords & Lyrics', controller: :chords, id: song.id %> </td> 
     <td class="options"><%= link_to "Comments(#{commentsCountSong(song.id)})", controller: :comments, song_id: song.id, c_type: 'song' %> </td> 
     <td class="options"><%= link_to 'Details', action: :show, id: song.id %></td> 

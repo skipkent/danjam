@@ -26,6 +26,10 @@
       <%= f.label "Chords" %><br />
       <%= f.text_area :chords %>
     </div>
+    <div class="field">
+      <%= f.label :performers %>
+      <%= f.text_field :performers %>
+    </div>
     <div class="actions">
       <%= link_to "Cancel", :back %>
       <%= f.submit "Submit" %>
