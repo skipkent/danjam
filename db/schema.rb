@@ -11,19 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326233214) do
+ActiveRecord::Schema.define(:version => 20130327134916) do
 
   create_table "comments", :force => true do |t|
-    t.integer   "song_id"
-    t.string    "username"
-    t.text      "message"
-    t.timestamp "created_at", :null => false
-    t.timestamp "updated_at", :null => false
-    t.integer   "post_id"
-    t.string    "c_type"
+    t.integer  "song_id"
+    t.string   "username"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "post_id"
+    t.string   "c_type"
   end
 
   add_index "comments", ["song_id"], :name => "index_comments_on_song_id"
+
+  create_table "performances", :force => true do |t|
+    t.integer  "song_id"
+    t.integer  "user_id"
+    t.string   "role"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "username"
@@ -53,6 +61,13 @@ ActiveRecord::Schema.define(:version => 20130326233214) do
     t.string   "phone"
     t.string   "instruments"
     t.boolean  "vocals"
+  end
+
+  create_table "users_songs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "song_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

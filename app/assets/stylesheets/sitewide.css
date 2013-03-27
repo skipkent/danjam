@@ -82,6 +82,18 @@ td.summary
     font-size:100%;
   }
 
+td.right
+  {
+    float:right;
+    width:49%;
+  }
+
+td.left
+  {
+    float:left;
+    width:49%;
+  }
+
 td.post_title
 {
   padding:4px;
