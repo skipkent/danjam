@@ -1,0 +1,8 @@
+<h1>Choose Performers for Song</h1>
+<h2><%= @song.title %></h2>
+
+<% if !@performance.any? %>
+  <h3>No performers assigned.</h3>
+<% else %>
+  <%= @performance %>
+<% end %>
