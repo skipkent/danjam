@@ -9,7 +9,8 @@ class HomeController < ApplicationController
   end
 
   def performers
-    @performers = User.all
+    @performers = User.find(:all, 
+                           :conditions => ["display_public = 't'"])
   end
   
 end
