@@ -1,5 +1,10 @@
 Danjam::Application.routes.draw do
-  resources :users
+  
+  resources :users do
+    collection do
+      get 'bios'
+    end
+  end
 
 
   resources :posts

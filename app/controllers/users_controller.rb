@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  layout 'backstage'
+  
   def index
     @users = User.all
 
@@ -8,6 +10,10 @@ class UsersController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @users }
     end
+  end
+
+  def bios
+    @user = User.find(params[:id])
   end
 
   # GET /users/1

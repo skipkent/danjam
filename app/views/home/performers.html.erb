@@ -1,0 +1,16 @@
+<h1> Meet the Performers! </h1>
+
+<table class="center">
+  <tr>
+    <th>Name</th>
+    <th>Instruments</th>
+    <th>Background</th>
+  </tr>
+  <% @performers.each do |performer| %>
+  <tr>
+    <td><%= performer.name %></td>
+    <td><%= performer.instruments %></td>
+    <td><%= performer.public_bio %></td>
+  </tr>
+  <% end %>
+</table>

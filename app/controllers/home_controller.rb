@@ -7,5 +7,9 @@ class HomeController < ApplicationController
 
   def directions
   end
+
+  def performers
+    @performers = User.all
+  end
   
 end
