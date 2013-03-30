@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < AdminController
   layout 'backstage'
   
   # GET /posts

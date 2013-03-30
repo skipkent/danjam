@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class CommentsController < AdminController
   layout 'backstage'
 
   # GET /comments

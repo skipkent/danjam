@@ -1,4 +1,4 @@
-class SongsController < ApplicationController
+class SongsController < AdminController
   # GET /songs
   # GET /songs.json
   layout 'backstage'

@@ -1,4 +1,4 @@
-class ChordsController < ApplicationController
+class ChordsController < AdminController
   layout 'backstage'
 
   def index
