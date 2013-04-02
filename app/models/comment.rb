@@ -3,4 +3,6 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   attr_accessible :message, :username, :song_id, :post_id, :c_type
 
+  validates :username, :presence => {:message => ' cannot be blank'}
+
 end
