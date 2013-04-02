@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  song: 
-  username: MyString
-  message: MyText
+  song: 1
+  username: "jTestcase"
+  message: "This is a comment from Johnny Testcase."
 
 two:
-  song: 
-  username: MyString
-  message: MyText
+  song: 2
+  username: "sTestcase"
+  message: "This is a comment from Sally Testcase."

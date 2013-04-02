@@ -4,7 +4,7 @@ class UsersController < AdminController
   layout 'backstage'
   
   def index
-    @users = User.all
+    @users = User.find(:all, :order => 'name ASC')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -37,6 +37,8 @@ h1, h2, h3, div.center
 p.center
   {
      text-align:center;
+     margin-right:20%;
+     margin-left:20%;
   }
 
 
@@ -115,5 +117,11 @@ table,th,td
 th.songlist
   {
     border:0px;
+  }
+
+.tinyPrint
+  {
+    font-size:70%;
+    width:10%;
   }
 

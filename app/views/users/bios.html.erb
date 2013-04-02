@@ -1,20 +1,22 @@
 <h1>User Bio's</h1>
+<p class="center">Private Bio's are only visible to users with Backstage access.  The Public Bio can be made world-viewable on the Home page by setting the 'Display public?' value to 'true'.</p>
+<p class="center">To change values click 'Edit'.</p>
 
 <table class="center">
   <tr>
     <th>Name</th>
     <th>Private bio</th>
     <th>Public bio</th>
-    <th colspan=3>Options</th>
+    <th class="tinyPrint">Display Public BIO on Home page?</th>
+    <th>Options</th>
   </tr>
 
   <tr>
     <td><%= @user.name %></td>
     <td><%= @user.private_bio %></td>
     <td><%= @user.public_bio %></td>
-    <td><%= link_to 'Show', @user %></td>
+    <td><%= @user.display_public %></td>
     <td><%= link_to 'Edit', edit_user_path(@user) %></td>
-    <td><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 </table>
 

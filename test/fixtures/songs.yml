@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  url: MyString
-  comment: MyText
+  title: "SpongeBob - Happy Birthday"
+  url: "http://www.youtube.com/watch?v=rob3Tsdmu0k"
+  chords: "ABAB"
 
 two:
-  title: MyString
-  url: MyString
-  comment: MyText
+  title: "The Cars - It's All I Can Do"
+  url: "http://www.youtube.com/watch?v=MZAkOSpVumw"
+  chords: "AABA"

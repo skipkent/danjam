@@ -4,7 +4,7 @@ class SongsController < AdminController
   layout 'backstage'
   
   def index
-    @songs = Song.all
+    @songs = Song.find(:all, :order => "title ASC")
 
     respond_to do |format|
       format.html # index.html.erb
