@@ -15,7 +15,7 @@
     <td class="post_title"><%= link_to post.title, post %></td>
     <td><%= post.message %></td>
     <td><%= link_to "Comments(#{commentsCountPost(post.id)})", controller: :comments, post_id: post.id, c_type: 'post' %> </td>
-    <td><%= post.updated_at.strftime("%m/%d") %></td>
+    <td><%= post.updated_at.strftime("%m/%d").sub(/^[0]/, "") %></td>
   </tr>
 <% end %>
 </table>
