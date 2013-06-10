@@ -1,2 +1,10 @@
-<h1>Time & Directions</h1>
-<p class="center">Event location and directions forthcoming.</p>
+<h1></h1>
+<% if @gigs.blank? %>
+  <p class="center">Event locationZ and directions forthcoming.</p>
+<% else %>
+  <h2><%= @currentGig.date %> at <%= @currentGig.time %> </h2>
+  <h2><%= @currentGig.venue %></h2>
+  <h3><a href="<%= @currentGig.venue_link %>" target='_blank'><%= @currentGig.venue_link %></a></h3>
+  <center><img src="<%= @currentGig.venue_image %>"></a></center>
+  <h3><%= @currentGig.directions %></h3>
+<% end %>

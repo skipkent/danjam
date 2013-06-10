@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @gig.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @gig.time %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @gig.venue %>
+</p>
+
+<p>
+  <!-- venue image displays here -->
+  <img src="<%= @gig.venue_image %>"></a>
+</p>
+
+<p>
+  <b>Venue Information:</b>
+  <a href="<%= @gig.venue_link %>" target='_blank'><%= @gig.venue_link %></a>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @gig.description %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @gig.directions %>
+</p>
+
+
+<%= link_to 'Edit', edit_gig_path(@gig) %> |
+<%= link_to 'Back', gigs_path %> |
+<%= link_to 'Delete', @gig, method: :delete, data: { confirm: 'Are you sure?' } %>
+

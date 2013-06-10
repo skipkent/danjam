@@ -1,0 +1,18 @@
+<% if @gigs.blank? %>
+  <p>There are not any gigs currently entered in the system. </p>
+<% else %>
+  <p class="center">These are the current gigs in our system.  The last gig entered (displayed at top of list) is the one which will appear on the Home page.</p>
+  <table class="center">
+    <tr>
+      <th>Date</th>
+      <th>Venue</th>
+    </tr>
+  <% @gigs.each do |g| %>
+    <tr>
+      <td><%= link_to g.date, {:action => 'show', :id => g.id} %></td>
+      <td><%= g.venue %></td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>
+<p><%= link_to "Add new Gig", {:action => 'new' }%></p>

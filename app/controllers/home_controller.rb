@@ -6,6 +6,8 @@ class HomeController < ApplicationController
   end
 
   def directions
+    @gigs = Gig.find(:all)
+    @currentGig = Gig.find(:last)
   end
 
   def performers

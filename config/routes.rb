@@ -9,7 +9,6 @@ Danjam::Application.routes.draw do
 
   resources :posts
 
-
   get "comments/index"
   get "comments/new"
 
@@ -25,6 +24,7 @@ Danjam::Application.routes.draw do
   resources :chords
   resources :comments
   resources :posts
+  resources :gigs
 
   get "home/index"
   root to: "home#index"
