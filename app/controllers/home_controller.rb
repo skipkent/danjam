@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @gig = Gig.find(:last)
   end
 
   def contact
