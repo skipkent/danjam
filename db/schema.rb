@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610173705) do
+ActiveRecord::Schema.define(:version => 20130610144256) do
 
   create_table "comments", :force => true do |t|
     t.integer  "song_id"
@@ -26,13 +26,15 @@ ActiveRecord::Schema.define(:version => 20130610173705) do
   add_index "comments", ["song_id"], :name => "index_comments_on_song_id"
 
   create_table "gigs", :force => true do |t|
-    t.text   "date"
-    t.text   "venue"
-    t.text   "description"
-    t.text   "directions"
-    t.string "venue_link"
-    t.text   "time"
-    t.text   "venue_image"
+    t.text     "date"
+    t.text     "venue"
+    t.text     "description"
+    t.text     "directions"
+    t.text     "time"
+    t.text     "venue_image"
+    t.string   "venue_link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "posts", :force => true do |t|
@@ -47,9 +49,9 @@ ActiveRecord::Schema.define(:version => 20130610173705) do
     t.string   "title"
     t.string   "url"
     t.text     "chords"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.text     "performers", :limit => 255
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "performers"
   end
 
   create_table "users", :force => true do |t|

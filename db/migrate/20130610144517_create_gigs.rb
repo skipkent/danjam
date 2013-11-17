@@ -1,14 +1,11 @@
-class Gigs < ActiveRecord::Migration
-  def up
+class CreateGigs < ActiveRecord::Migration
+  def change
     create_table :gigs do |t|
       t.text  :date
       t.text  :venue
       t.text  :description
       t.text  :directions
+      t.timestamps
     end
-  end
-
-  def down
-    drop_table :gigs
   end
 end
