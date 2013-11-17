@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(:version => 20130610173705) do
 
   create_table "comments", :force => true do |t|
-    t.integer   "song_id"
-    t.string    "username"
-    t.text      "message"
-    t.timestamp "created_at", :null => false
-    t.timestamp "updated_at", :null => false
-    t.integer   "post_id"
-    t.string    "c_type"
+    t.integer  "song_id"
+    t.string   "username"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "post_id"
+    t.string   "c_type"
   end
 
   add_index "comments", ["song_id"], :name => "index_comments_on_song_id"
@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(:version => 20130610173705) do
   end
 
   create_table "posts", :force => true do |t|
-    t.string    "username"
-    t.string    "title"
-    t.text      "message"
-    t.timestamp "created_at", :null => false
-    t.timestamp "updated_at", :null => false
+    t.string   "username"
+    t.string   "title"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "songs", :force => true do |t|
@@ -53,17 +53,17 @@ ActiveRecord::Schema.define(:version => 20130610173705) do
   end
 
   create_table "users", :force => true do |t|
-    t.string    "name"
-    t.string    "email"
-    t.string    "preferred_contact_channel"
-    t.text      "private_bio"
-    t.text      "public_bio"
-    t.boolean   "display_public"
-    t.timestamp "created_at",                :null => false
-    t.timestamp "updated_at",                :null => false
-    t.string    "phone"
-    t.string    "instruments"
-    t.boolean   "vocals"
+    t.string   "name"
+    t.string   "email"
+    t.string   "preferred_contact_channel"
+    t.text     "private_bio"
+    t.text     "public_bio"
+    t.boolean  "display_public"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "phone"
+    t.string   "instruments"
+    t.boolean  "vocals"
   end
 
 end
