@@ -1,3 +1,6 @@
 See this application running on Heroku:
 
 http://targetcancerjam.herokuapp.com
+
+Click the 'backstage' link to see the deeper functionality.
+Log in with 'performer/pass4backstage'
